@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block body_block %}
+
+<h1> Cifrado Mochila </h1>
+<br>
+<p>Creado por Rivest, Shamir y Adleman en 1977, es el algoritmo más utilizado a día de hoy ya que no se ha podido romper y es válido para cifrar y para crear una firma digital.
+<p>Este cifrado basa su fortaleza en la dificultad de trabajar con números primos muy elevados, actualmente del orden de 100^200 aunque posiblemente este tamaño crezca con el aumento de cálculo de los ordenadores.
+
+<p><u>Generación de claves</u>
+<p>Se calculan dos numeros primos distintos p y q
+<p>n = p*q
+<p>phi(n) = (p-1)*(q-1)
+<p>Se escoge un número e menor que phi(n) y coprimo con este, es decir , su máximo común divisor es  1.
+<p>Por último se escoge d tal que e*d = 1 mod phi(n)
+<br>
+<p>La clave pública se compone de (n,e) y la clave privada de (n,d)
+
+<p><u>Cifrado</u>
+<p>1. El texto se pasa a números, teniendo en cuenta que 1 debe ser 01, 2 debe ser 02, etc.
+<p>2. c = m^e mod n
+
+<p><u>Descifrado</u>
+<p>1.m=c^d mod n
+<p>2. Se pasa m a letra
+
+<br><br>
+<p>Como se comprueba el método es bastante sencillo, asi como la generación de claves, pero al ser números tan grandes no se puede trabajar con ellos por fuerza bruta, lo que hace muy complicado que el ataque a este cifrado se realice exitosamente.
+
+{% endblock %}

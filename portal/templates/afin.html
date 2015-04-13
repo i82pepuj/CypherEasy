@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+{% block body_block %}
+
+<h1> Cifrado Afín </h1>
+<br>
+<p>
+
+Cifrado creado en 1967, el cual consiste en la sustitución siguiendo la siguiente fórmula matemática:
+
+
+
+<li>Ci = (a*mi+b) mod n
+
+<li>Mi = (Ci-b)*d mod n
+
+<p>donde:
+
+<li>Ci: símbolo cifrado del texto
+
+<li>a: constante de decimación
+
+<li>mi: símbolo del texto a cifrar
+
+<li>b: constante de desplazamiento
+
+<li>n : número de símbolos del alfabeto de cifrado
+
+<li>Mi: símbolo descifrado
+
+<li>d: inverso de a modulo n
+
+<p>
+  Además, se debe satisfacer que:
+<p>
+<li>  0 <= b <= 1
+
+<li>  a != 0
+
+<li>  mcd (a,n) = 1
+
+<p>
+<p>
+  Por ejemplo, para el mensaje “hola” a = 3, b = 5 y n = 26.
+<p>
+  h = 7 => Ci = (7*3+5) mod 26 = 0 = a
+<p>
+  o = 14 => Ci = 21 = v
+<p>
+  l = 11 => Ci = 12 = m
+<p>
+  a = 0 => Ci = 5 = f
+
+
+<p>
+  Por lo tanto C = avmf.
+
+
+<p>
+  Para descifrar se averigua d, que en este caso d = 9 ya que d = 3,9 = 27 = 1 mod 26 y se aplica la fórmula de descifrado termino por término.
+
+
+<p>
+  a = 0 => Mi = (0-5)*9 mod 26 = 7 =h
+<p>
+  v = 21 => Mi = 14 = o
+<p>
+  m = 12 => Mi = 11 = l
+<p>
+  f = 5 => Mi = 0 = a
+
+
+<p>
+  M = “hola”, que es nuestro mensaje original.
+
+
+{% endblock %}

@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+
+{% block body_block %}
+
+<h1> ¿Qué es la criptografía? </h1>
+<br>
+<p>
+
+Tradicionalmente se ha definido como criptografía a las técnicas de cifrado y codificado destinadas a alterar las representaciones linguísticas de ciertos mensajes con el fin de hacerlo ininteligibles a receptores no autorizados. El único objetivo de la criptografía era conseguir la confidencialidad de los mensajes. Para eso se diseñaban sistemas de cifrados y códigos. estos tipos de sistemas pertecen a un tipo de criptografía conocida como criptografía clásica.</p>
+
+<p>Con el avance de la informática y el uso masivo de las comunicaciones digitales han aparecido un gran número de vulnerabilidades de seguridad. Las transsacciones que se realizan a través de la red pueden ser interceptadas y por tanto, se debe garanzatizar. Este problema ha generalizado los objetivos de la criptografía para proteger la información y dotar de seguridad a las comunicaciones y a las entidades que se comunican.</p>
+
+<p>Para ello los critógrafos se centran en investigar y desarrollar técnicas matemáticas que les sirven como herramientas para conseguir sus objetivos. Los grandes avances que se han producido en la criptografía han sido gracias a los avances en los campos de las mátemáticas y la informática.</p>
+<br>
+<h2>Historia de la criptografía</h2>
+<br>
+<p>La criptografía se creó casi a la misma vez que el ser humano empezó a hablar, ya que siempre se han intentado intercambiar mensajes de forma segura aunque no es hasta la Gracia clásica cuando se utiliza la criptografía como tal. Los griegos utilizaban la escitala para cifrar por transposición.
+
+  <p>La primera función de cifrado fue creada por Julio César para uso militar, cifrado César.
+
+    <p>El primer ataque a un cifrado fue al analizar el Corán, lo que llevo a la invención de la técnica del análisis de frecuencias para romper los cifrados por sustitución mono-alfabéticos. Este fue el mayor avance en la criptografía hasta la Segunda Guerra Mundial, quedando todos los cifrados vulnerables.
+
+      <p>Así el siguiente avance importante fue en la Segunda Guerra Mundial, cuando los alemanes usaron una máquina de rotores que automatizaba los cálculos para las operaciones de cifrado y  descifrado. Se consiguió descifrar gracias a grandes matemáticos y un gran esfuerzo computaciones. Desde entonces los avances en criptografía han crecido exponencialmente.
+
+        <p>En los años 70 el Departamento de Normas y Estándares norteamericano publica el primer diseño lógico de un cifrador, el Estándar de Cifrado de Datos o DES.
+
+          <p>El siguiente gran paso fue la criptografía asimétrica creando las claves públicas y privadas, permitiendo introducir la criptografía en otros campos.
+<br>
+<h2>Tipos de cifrado</h2>
+<br>
+<p>
+Hay multitud de funciones de cifrado, estas se pueden resumir en distintos tipos:
+
+<li>Criptografía simétrica: funciones que usan una sola clave.
+
+<li>Criptografía asimétrica: funciones las cuales usan una clave pública para cifrar y otra clave privada para descifrar.
+
+<li>Criptografía con umbral: distribuye la clave entre muchos usuarios.
+
+<li>Criptografía basada en identidad: es un tipo de criptografía asimétrica que se basa en el uso de identidades.
+<p>
+<br>
+<h2>Objetivos</h2>
+<br>
+<p>Hoy en día la criptografía estudia algoritmos, protocolos y sistemas que se utilizan para dotar de seguridad a las comunicaciones, a la información y a los organismos que se comunican. Esto conlleva a que la criptografía intente alcanzar unos objetivos como son:
+
+<li>Confidencialidad: garantiza que la información es accesible solamente a personal autorizado. Para conseguirlo utiliza códigos y técnicas de cifrado.
+
+<li>Integridad: garantiza la corrección y completitud de la información. Esto se consigue a través de funciones hash, protocolos de compromiso de bits, etc.
+
+<li>Vinculación: permite vincular un documento o transacción a una persona o un sistema de gestión criptográfico automatizado. Esto se consigue a través de la firma digital o el cifrado negable.
+
+<li>Autenticación: persigue verificar la identidad del emisor. Esto se consigue con una función hash o protocolo de conocimiento cero.
+<p>
+<br>
+<h2>Ataques a los sistemas de cifrado</h2>
+<p>
+Para que un cifrado sea bueno su mensaje no debe ser descifrado, o si es descifrado que el mensaje haya perdido su valor. Por ejemplo si el mensaje es un ataque en una guerra da lo mismo que se descifre una vez empezado el ataque.
+<p>
+Para romper un mensaje cifrado hay tres formas:
+
+<li> Atacar a la criptografía subyacente: atacar a los mecanismos de cifrados usando utilizando la fuerza bruta para conseguir las claves.
+
+<li> Atacar a la implementación concreta: debido a que se cifra mediante hardware o software, se busca un fallo en estos para romper el cifrado.
+
+<li>  Atacar al lado humano: se intenta conseguir la clave utilizada a través del ser humano que conoce dicha clave.
+{% endblock %}

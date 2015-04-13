@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block body_block %}
+
+<h1> Cifrado Mochila </h1>
+
+<p>
+  <h2>Generar nueva clave mochila<h2><br>
+  <form action="/generarclavemochila/" method="post">
+      {% csrf_token %}
+      <label for="nombre">Nombre de la clave: </label>
+      <input id="nombre" type="text" name="nombre">
+      <input type="submit" value="Generar nueva clave" />
+  </form>
+
+</p>
+
+</br></br>
+
+<p>
+  <h2>Introducir clave mochila</h2>
+  <form action="/introducirclavemochila/" method="post">
+      {% csrf_token %}
+      <label for="nombre">Nombre de la clave: </label>
+      <input id="nombre" type="text" name="nombre"></br>
+      <label for="mochila">Clave mochila: </label>
+      <input id="mochila" type="text" name="mochila"></br>
+      <label for="publica">Clave publica: </label>
+      <input id="publica" type="text" name="publica"></br>
+      <label for="m">Valor m: </label>
+      <input id="m" type="text" name="m"></br>
+      <label for="w">Valor w: </label>
+      <input id="w" type="text" name="w"></br>
+      <input type="submit" value="Guardar clave clave" />
+  </form>
+
+</p>
+
+
+</br></br>
+<p>
+<h2>Cifrar con el método Mochila</h2>
+<form action="/cifrarmochila/" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Enviar" />
+</form>
+
+</p>
+
+{% endblock %}

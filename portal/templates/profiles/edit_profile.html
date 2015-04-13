@@ -1,0 +1,22 @@
+{% extends "blog/base.html" %}
+
+{% block content %}
+<h2>Edit profile info for {{ user }}</h2>
+<form action="" method="POST"><p><label for="id_url">Website:</label> <input id="id_url" type="text" name="url" value="{{ profile.url }}" maxlength="200" /></p>
+<p><label for="id_company">Company:</label> <input id="id_company" type="text" name="company" value="{{ profile.company }}" maxlength="50" /></p>
+<p><label for="id_country">Country:</label> <input id="id_country" type="text" name="country" value="{{ profile.country }}" maxlength="50" /></p>
+<p><label for="id_age">Age:</label> <input type="text" name="age" value="{{ profile.age }}" id="id_age" /></p>
+<p><label for="id_gender">Gender:</label> <select name="gender" id="id_gender">
+{% if profile.gender == "MA" %}
+<option value="">---------</option>
+<option value="MA" selected="selected">Male</option>
+<option value="FE">Female</option>
+</select>
+{% else %}
+<option value="">---------</option>
+<option value="MA">Male</option>
+<option value="FE"selected="selected">Female</option>
+</select>
+{% endif %}
+</p> <input id="submit" type="submit" name="submit" value="Update" /></form>
+{% endblock %}

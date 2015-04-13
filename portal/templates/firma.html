@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block body_block %}
+
+<h1> Firma digital </h1>
+<br>
+<p>
+
+  Con este método también se puede crear una firma digital. Una firma digital permite al receptor de un mensaje firmado digitalmente determinar si el emisor no ha sido sustituido y comprobar que no se ha alterado el mensaje desde que fue firmado.
+<p>
+  Esto se lleva a cabo de la siguiente forma:
+
+<li>A redacta el mensaje.
+
+<li>A firma el mensaje digitalmente con su clave privada.
+
+<li>A envía a B el mensaje firmado.
+
+<li>B recibe el mensaje y comprueba la autenticación con la clave pública de B.
+<p>
+  La creación de la firma digital con este método se realiza de la siguiente forma:
+
+<li>Se crea un resumen del mensaje mediante una función HASH.
+
+<li>Representa este resumen como un entero M entre 0 y n-1.
+
+<li>Con la clave privada (d,n) se crea la firma digital.
+
+
+{% endblock %}

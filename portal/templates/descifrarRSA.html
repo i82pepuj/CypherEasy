@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block body_block %}
+
+<h1> Descifrado RSA</h1>
+</br></br>
+
+<p>
+  <h2>Introducir clave RSA</h2>
+  <form action="/introducirclaversa/" method="post">
+      {% csrf_token %}
+      <label for="nombre">Nombre de la clave: </label>
+      <input id="nombre" type="text" name="nombre"></br>
+      <label for="n">Valor n: </label>
+      <input id="n" type="text" name="n"></br>
+      <label for="e">Valor e: </label>
+      <input id="e" type="text" name="e"></br>
+      <label for="d">Valor d: </label>
+      <input id="d" type="text" name="d"></br>
+      <input type="submit" value="Guardar clave clave" />
+  </form>
+
+</p>
+
+
+</br></br>
+<p>
+  <h2>Descifrar con el método RSA</h2>
+<form action="/descifrarrsa/" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Enviar" />
+</form>
+
+</p>
+
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block body_block %}
+
+<h1> Cifrado Mochila </h1>
+<br>
+<p>Este algoritmo, también llamado Merkle-Hellman, fue inventado en 1978 por Ralph Merkle y Martin Hellman basandose en el problema de la mochila de decisión.
+
+<p>Se necesitan dos llaves, una privada y otra pública, pero a diferencia con el RSA, las claves generadas solo sirben para cifrar y descifrar pero no para generar una firma digital.
+
+<p><u>Generación de claves </u>
+<p> Teniendo un mensaje de n-bits se debe elegir una secuencia supercreciente, es decir, un elemento de la mochila siempre será mayor que el elemento anterior.
+<p> Teniendo la mochila supercreciente a, en la que cada elemento es mayor que la suma de los anteriores, obtenemos las claves w y m.
+<p> w es un numero tal que el maximo comun divisor entre w y m sea 1
+<p> m debe ser mayor que el doble del ultimo elemento de la mochila.
+<p> Una vez obtenemos estos valores generamos la clave pública b.
+<p> b = w*a mod m
+
+<p><u>Cifrado</u>
+<p>1.Pasamos el texto a binario de x digitos.
+<p>2.Dividimos el resultado en bloques de n bits
+<p>3.Multiplicamos cada bloque por b
+
+<p><u>Descifrado</u>
+<p>1.Calculamos el inverso de w mod m, llamemosle p
+<p>2.Multiplicamos del mensaje cifrado cada elemento por p mod m
+<p>3.Cada elemento se resta por el mayor de la mochila:
+<p>3.1. Si la resta es positiva se añade 1 y se deja el resultado
+<p>3.2. Si la resta es negativa se añade 0 y no se resta
+<p>4. Se divide el resultado de 1 y 0 en bloques de x bits y se pasa a letra.
+
+
+
+
+
+{% endblock %}

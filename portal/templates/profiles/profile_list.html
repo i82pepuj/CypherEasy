@@ -1,0 +1,15 @@
+{% extends "blog/base.html" %}
+
+{% block content %}
+{% if user.is_staff %}
+<h2>Profile's list</h2>
+<div>
+	{% for p in object_list  %}
+	<p>&gt;<a href="{% url profiles_profile_detail p.user %}"> {{ p.user.username }}</a></p>
+	{% endfor %}
+</div>
+{% else %}
+	<p>You are not authorized to view this page</p>
+{% endif %}
+
+{% endblock %}

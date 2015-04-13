@@ -1,0 +1,16 @@
+{% extends "blog/base.html" %}
+
+{% block content %}
+<h2>{{ user }}'s profile</h2>
+<div>
+	<p>Username: {{ profile.user.username }}</p>
+	<p>Email: {{ profile.user.email }}</p>
+	<p>Company: {{ profile.company }}</p>
+	<p>Age: {{ profile.age }}</p>
+</div>
+<div>
+	<p><a href="/profiles/edit/">Edit my profile</a></p>
+	<p><a href="/accounts/password_change/">Change password</a></p>
+</div>
+
+{% endblock %}

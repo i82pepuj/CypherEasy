@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block body_block %}
+
+<h1> Cifrado Cesar </h1>
+<br>
+<p>
+
+<p>Este método de cifrado fue creado por Julio César para proteger mensajes de uso militar, sustituyendo las letras del mensaje por otras.
+
+<p>El funcionamiento de este cifrado es bastante sencillo, se desplaza el alfabeto un determinado número de posiciones, K. El cifrado original, el usado por Cesar, siempre mantuvo K = 3, aunque K puede ser cualquier valor dentro del tamaño del alfabeto a usar.
+
+
+
+<p>Alfabeto: “abcdefghijklmnopqrstuvwxyz”
+
+<p>K = 3
+
+<p>Alfabeto cifrado: “defghijklmnopqrstuvwxyzabc”
+
+
+
+<p>De esta manera el mensaje “hola” pasa a ser “krod”.
+
+
+
+<p>Para descifrar en lugar de sumar K debe restarse.
+
+
+
+<p>Este cifrado es fácil de romper ya que la letra que más se repita en el mensaje cifrado será la que más se repita en el uso de la lengua en el que esté escrito el mensaje.
+
+<p>Así, en el español, la letra que más se repite es la “e”, por lo tanto en un mensaje cifrado largo la que más se repita será por la que es sustituida la “e”, por lo que ya podremos deducir K y descifrar el mensaje.
+
+
+{% endblock %}
